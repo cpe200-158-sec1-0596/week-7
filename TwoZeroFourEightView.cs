@@ -23,6 +23,10 @@ namespace twozerofoureight
             controller = new TwoZeroFourEightController();
             controller.AddModel(model);
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
+            TwoZeroFourEightScoreView ScoreViewForm = new TwoZeroFourEightScoreView();
+            model.AttachObserver(ScoreViewForm);
+            ScoreViewForm.Visible = true;
+            ScoreViewForm.Enabled = true;
         }
 
         public void Notify(Model m)
