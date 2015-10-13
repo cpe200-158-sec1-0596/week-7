@@ -28,7 +28,7 @@ namespace twozerofoureight
         public void Notify(Model m)
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
-            lblScore.Text = Convert.ToString(TwoZeroFourEightModel.Score);
+            lblScore.Text = Convert.ToString(((TwoZeroFourEightModel)m).Score);
         }
 
         private void UpdateTile(Label l, int i)
